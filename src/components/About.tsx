@@ -17,11 +17,9 @@ const About = () => {
             </div>
             
             <div className="space-y-6">
-              <h3 className="text-2xl font-bold text-slate-800">I'm Sonaal Thaker, a passionate Software Engineer with expertise in AI/ML, Data and backend Engineering based. I am based in SF Bay area.</h3>
+              <h3 className="text-2xl font-bold text-slate-800">I'm Sonaal Thaker, a Software Engineer with expertise in AI/ML, Data and backend Engineering based. I am based in SF Bay area.</h3>
               
-              <p className="text-slate-600 leading-relaxed">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl vel ultricies lacinia, nisl nisl aliquam nisl, nec aliquam nisl nisl nec nisl. Sed euismod, nisl vel ultricies lacinia, nisl nisl aliquam nisl, nec aliquam nisl nisl nec nisl.
-              </p>
+              <p className="text-slate-600 leading-relaxed">I have about 3 years of software development experience from brands such as Cisco and CapitalOne. Most recently, I have been focused on independent project work in both traditional ML as well as Gen AI model development.</p>
               
               <p className="text-slate-600 leading-relaxed">
                 Sed euismod, nisl vel ultricies lacinia, nisl nisl aliquam nisl, nec aliquam nisl nisl nec nisl. Sed euismod, nisl vel ultricies lacinia, nisl nisl aliquam nisl, nec aliquam nisl nisl nec nisl.
