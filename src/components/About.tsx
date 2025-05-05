@@ -27,21 +27,21 @@ const About = () => {
                 <Card>
                   <CardContent className="p-4">
                     <p className="font-semibold text-slate-700">Name:</p>
-                    <p className="text-slate-600">Your Name</p>
+                    <p className="text-slate-600">Sonaal Thaker</p>
                   </CardContent>
                 </Card>
                 
                 <Card>
                   <CardContent className="p-4">
                     <p className="font-semibold text-slate-700">LinkedIn:</p>
-                    <p className="text-slate-600">your.email@example.com</p>
+                    <p className="text-slate-600">linkedin.com/in/sonaalthaker</p>
                   </CardContent>
                 </Card>
                 
                 <Card>
                   <CardContent className="p-4">
                     <p className="font-semibold text-slate-700">Location:</p>
-                    <p className="text-slate-600">Your Location</p>
+                    <p className="text-slate-600">SF Bay area</p>
                   </CardContent>
                 </Card>
                 
