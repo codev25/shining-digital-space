@@ -21,9 +21,7 @@ const About = () => {
               
               <p className="text-slate-600 leading-relaxed">I have about 3 years of software development experience from brands such as Cisco and CapitalOne. Most recently, I have been focused on independent project work in both traditional ML as well as Gen AI model development.</p>
               
-              <p className="text-slate-600 leading-relaxed">
-                Sed euismod, nisl vel ultricies lacinia, nisl nisl aliquam nisl, nec aliquam nisl nisl nec nisl. Sed euismod, nisl vel ultricies lacinia, nisl nisl aliquam nisl, nec aliquam nisl nisl nec nisl.
-              </p>
+              <p className="text-slate-600 leading-relaxed">I am an avid reader and enjoy reading both fiction and non-fiction. I am also a cross-fit enthusiast, and in my spare time enjoy intense workouts with my cross-fit community.</p>
               
               <div className="grid grid-cols-2 gap-4 pt-4">
                 <Card>
