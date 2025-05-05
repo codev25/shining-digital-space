@@ -1,10 +1,7 @@
-
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
-
 const About = () => {
-  return (
-    <section id="about" className="py-20 bg-slate-50">
+  return <section id="about" className="py-20 bg-slate-50">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
@@ -20,9 +17,7 @@ const About = () => {
             </div>
             
             <div className="space-y-6">
-              <h3 className="text-2xl font-bold text-slate-800">
-                I'm Your Name, a passionate developer based in Your Location.
-              </h3>
+              <h3 className="text-2xl font-bold text-slate-800">I'm Sonaal Thaker, a passionate Software Engineer with expertise in AI/ML, Data and backend Engineering based. I am based in SF Bay area.</h3>
               
               <p className="text-slate-600 leading-relaxed">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl vel ultricies lacinia, nisl nisl aliquam nisl, nec aliquam nisl nisl nec nisl. Sed euismod, nisl vel ultricies lacinia, nisl nisl aliquam nisl, nec aliquam nisl nisl nec nisl.
@@ -42,7 +37,7 @@ const About = () => {
                 
                 <Card>
                   <CardContent className="p-4">
-                    <p className="font-semibold text-slate-700">Email:</p>
+                    <p className="font-semibold text-slate-700">LinkedIn:</p>
                     <p className="text-slate-600">your.email@example.com</p>
                   </CardContent>
                 </Card>
@@ -57,16 +52,13 @@ const About = () => {
                 <Card>
                   <CardContent className="p-4">
                     <p className="font-semibold text-slate-700">Experience:</p>
-                    <p className="text-slate-600">X Years</p>
+                    <p className="text-slate-600">3 Years</p>
                   </CardContent>
                 </Card>
               </div>
               
               <div className="pt-4">
-                <a 
-                  href="#contact"
-                  className="inline-flex items-center px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors"
-                >
+                <a href="#contact" className="inline-flex items-center px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors">
                   Download CV
                 </a>
               </div>
@@ -74,8 +66,6 @@ const About = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default About;
