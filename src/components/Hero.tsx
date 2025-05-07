@@ -2,6 +2,7 @@
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+
 const Hero = () => {
   return <section id="home" className="min-h-screen flex flex-col items-center justify-center pt-16 pb-8">
       <div className="container mx-auto px-4">
@@ -34,4 +35,5 @@ const Hero = () => {
       </div>
     </section>;
 };
+
 export default Hero;

@@ -1,5 +1,9 @@
+
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
+import { Avatar, AvatarImage } from '@/components/ui/avatar';
+
 const About = () => {
   return <section id="about" className="py-20 bg-slate-50">
       <div className="container mx-auto px-4">
@@ -11,9 +15,11 @@ const About = () => {
           
           <div className="grid md:grid-cols-2 gap-8 items-center">
             <div className="rounded-lg overflow-hidden shadow-lg">
-              <div className="aspect-[4/5] bg-slate-200 flex items-center justify-center">
-                <span className="text-slate-500 text-lg">Your Photo</span>
-              </div>
+              <img 
+                src="/lovable-uploads/1e1fdc2f-78c2-4c38-8905-c28b4ff65483.png" 
+                alt="Sonaal Thaker" 
+                className="w-full h-auto object-cover"
+              />
             </div>
             
             <div className="space-y-6">

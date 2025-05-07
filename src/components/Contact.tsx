@@ -2,9 +2,7 @@
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
-import { Mail, Phone, MapPin } from 'lucide-react';
+import { Mail, MapPin, Linkedin } from 'lucide-react';
 
 const Contact = () => {
   return (
@@ -13,102 +11,66 @@ const Contact = () => {
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-slate-800 mb-4">Get In Touch</h2>
           <div className="w-20 h-1 bg-blue-600 mx-auto mb-6"></div>
-          <p className="max-w-2xl mx-auto text-slate-600">
+          <p className="max-w-2xl mx-auto text-slate-600 mb-8">
             Feel free to reach out to me for any queries or opportunities.
           </p>
+          
+          <div className="flex justify-center">
+            <a 
+              href="https://www.linkedin.com/in/sonaalthaker/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors"
+            >
+              <Linkedin size={20} />
+              Connect on LinkedIn
+            </a>
+          </div>
         </div>
 
-        <div className="grid lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-          <div className="lg:col-span-1 space-y-6">
-            <Card>
-              <CardContent className="p-6 flex items-start space-x-4">
-                <div className="p-3 bg-blue-50 rounded-lg">
-                  <Mail className="text-blue-600" />
-                </div>
-                <div>
-                  <h3 className="font-medium text-lg text-slate-800 mb-1">Email</h3>
-                  <p className="text-slate-600">your.email@example.com</p>
-                </div>
-              </CardContent>
-            </Card>
-            
-            <Card>
-              <CardContent className="p-6 flex items-start space-x-4">
-                <div className="p-3 bg-blue-50 rounded-lg">
-                  <Phone className="text-blue-600" />
-                </div>
-                <div>
-                  <h3 className="font-medium text-lg text-slate-800 mb-1">Phone</h3>
-                  <p className="text-slate-600">+1 234 567 890</p>
-                </div>
-              </CardContent>
-            </Card>
-            
-            <Card>
-              <CardContent className="p-6 flex items-start space-x-4">
-                <div className="p-3 bg-blue-50 rounded-lg">
-                  <MapPin className="text-blue-600" />
-                </div>
-                <div>
-                  <h3 className="font-medium text-lg text-slate-800 mb-1">Location</h3>
-                  <p className="text-slate-600">City, Country</p>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
+        <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+          <Card className="md:col-span-1">
+            <CardContent className="p-6 flex items-start space-x-4">
+              <div className="p-3 bg-blue-50 rounded-lg">
+                <Mail className="text-blue-600" />
+              </div>
+              <div>
+                <h3 className="font-medium text-lg text-slate-800 mb-1">Email</h3>
+                <p className="text-slate-600">your.email@example.com</p>
+              </div>
+            </CardContent>
+          </Card>
           
-          <div className="lg:col-span-2">
-            <Card>
-              <CardContent className="p-6">
-                <h3 className="text-xl font-bold text-slate-800 mb-6">Send Me a Message</h3>
-                <form className="space-y-4">
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <div>
-                      <label htmlFor="name" className="block text-sm font-medium text-slate-700 mb-1">Name</label>
-                      <Input
-                        id="name"
-                        placeholder="Your name"
-                        className="w-full"
-                      />
-                    </div>
-                    <div>
-                      <label htmlFor="email" className="block text-sm font-medium text-slate-700 mb-1">Email</label>
-                      <Input
-                        id="email"
-                        type="email"
-                        placeholder="Your email"
-                        className="w-full"
-                      />
-                    </div>
-                  </div>
-                  
-                  <div>
-                    <label htmlFor="subject" className="block text-sm font-medium text-slate-700 mb-1">Subject</label>
-                    <Input
-                      id="subject"
-                      placeholder="Subject"
-                      className="w-full"
-                    />
-                  </div>
-                  
-                  <div>
-                    <label htmlFor="message" className="block text-sm font-medium text-slate-700 mb-1">Message</label>
-                    <Textarea
-                      id="message"
-                      placeholder="Your message"
-                      className="w-full min-h-32"
-                    />
-                  </div>
-                  
-                  <div>
-                    <Button className="w-full md:w-auto px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg">
-                      Send Message
-                    </Button>
-                  </div>
-                </form>
-              </CardContent>
-            </Card>
-          </div>
+          <Card className="md:col-span-1">
+            <CardContent className="p-6 flex items-start space-x-4">
+              <div className="p-3 bg-blue-50 rounded-lg">
+                <Linkedin className="text-blue-600" />
+              </div>
+              <div>
+                <h3 className="font-medium text-lg text-slate-800 mb-1">LinkedIn</h3>
+                <a 
+                  href="https://www.linkedin.com/in/sonaalthaker/" 
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-600 hover:underline"
+                >
+                  linkedin.com/in/sonaalthaker
+                </a>
+              </div>
+            </CardContent>
+          </Card>
+          
+          <Card className="md:col-span-1">
+            <CardContent className="p-6 flex items-start space-x-4">
+              <div className="p-3 bg-blue-50 rounded-lg">
+                <MapPin className="text-blue-600" />
+              </div>
+              <div>
+                <h3 className="font-medium text-lg text-slate-800 mb-1">Location</h3>
+                <p className="text-slate-600">SF Bay area</p>
+              </div>
+            </CardContent>
+          </Card>
         </div>
       </div>
     </section>
