@@ -15,7 +15,7 @@ const Footer = () => {
             
             <div className="flex space-x-4">
               <a 
-                href="https://github.com" 
+                href="https://github.com/srtthaker?tab=repositories" 
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-2 rounded-full bg-slate-700 hover:bg-slate-600 transition-colors"

@@ -16,7 +16,7 @@ const About = () => {
           <div className="grid md:grid-cols-2 gap-8 items-center">
             <div className="rounded-lg overflow-hidden shadow-lg">
               <img 
-                src="/lovable-uploads/1e1fdc2f-78c2-4c38-8905-c28b4ff65483.png" 
+                src="/lovable-uploads/4c0deca5-84b9-4e88-b42a-c80d22a80746.png" 
                 alt="Sonaal Thaker" 
                 className="w-full h-auto object-cover"
               />
@@ -60,7 +60,12 @@ const About = () => {
               </div>
               
               <div className="pt-4">
-                <a href="#contact" className="inline-flex items-center px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors">
+                <a 
+                  href="https://docs.google.com/document/d/1i14Qmw_F0N2A4OHnM_xDqK14akpaamHp/edit" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="inline-flex items-center px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors"
+                >
                   Download CV
                 </a>
               </div>

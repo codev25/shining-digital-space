@@ -2,7 +2,7 @@
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { Mail, MapPin, Linkedin } from 'lucide-react';
+import { Linkedin, MapPin } from 'lucide-react';
 
 const Contact = () => {
   return (
@@ -28,19 +28,7 @@ const Contact = () => {
           </div>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-          <Card className="md:col-span-1">
-            <CardContent className="p-6 flex items-start space-x-4">
-              <div className="p-3 bg-blue-50 rounded-lg">
-                <Mail className="text-blue-600" />
-              </div>
-              <div>
-                <h3 className="font-medium text-lg text-slate-800 mb-1">Email</h3>
-                <p className="text-slate-600">your.email@example.com</p>
-              </div>
-            </CardContent>
-          </Card>
-          
+        <div className="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto">
           <Card className="md:col-span-1">
             <CardContent className="p-6 flex items-start space-x-4">
               <div className="p-3 bg-blue-50 rounded-lg">

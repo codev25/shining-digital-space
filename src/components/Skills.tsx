@@ -1,56 +1,48 @@
 
 import React, { useState } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
-import { 
-  Python, Java, Sql, 
-  Aws, Docker, Git, 
-  Tensorflow, Pytorch, 
-  Langchain, FastApi 
-} from 'lucide-react';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Code, Database, Award } from 'lucide-react';
 
 const Skills = () => {
-  const [activeCategory, setActiveCategory] = useState('Languages');
-
-  const categories = [
-    'Languages',
-    'Frameworks/Libraries',
-    'ML/Data',
-    'Cloud/DevOps',
-    'Certifications'
-  ];
-
-  const skillsByCategory = {
+  const skillCategories = {
     'Languages': [
-      { name: 'Python', icon: <Python className="text-blue-500" /> },
-      { name: 'Java', icon: <Java className="text-orange-500" /> },
-      { name: 'Scala', icon: <span className="text-red-500 font-bold">S</span> },
-      { name: 'SQL', icon: <Sql className="text-blue-600" /> },
-      { name: 'HTML/CSS', icon: <span className="text-orange-500 font-bold">&lt;/&gt;</span> }
+      { name: 'Python' },
+      { name: 'Java' },
+      { name: 'Scala' },
+      { name: 'SQL' },
+      { name: 'HTML/CSS' }
     ],
-    'Frameworks/Libraries': [
-      { name: 'LangChain', icon: <Langchain className="text-green-500" /> },
-      { name: 'FastAPI', icon: <FastApi className="text-teal-500" /> },
-      { name: 'PyTorch', icon: <Pytorch className="text-orange-500" /> },
-      { name: 'TensorFlow', icon: <Tensorflow className="text-yellow-500" /> },
-      { name: 'Streamlit', icon: <span className="text-red-500 font-bold">St</span> },
-    ],
-    'ML/Data': [
-      { name: 'Pandas', icon: <span className="text-blue-500 font-bold">🐼</span> },
-      { name: 'NumPy', icon: <span className="text-blue-700 font-bold">Np</span> },
-      { name: 'Scikit-learn', icon: <span className="text-orange-500 font-bold">Sk</span> },
-      { name: 'Dask', icon: <span className="text-green-500 font-bold">Dk</span> },
-      { name: 'ChromaDB', icon: <span className="text-purple-500 font-bold">Ch</span> }
-    ],
-    'Cloud/DevOps': [
-      { name: 'AWS', icon: <Aws className="text-orange-400" /> },
-      { name: 'Docker', icon: <Docker className="text-blue-500" /> },
-      { name: 'Git', icon: <Git className="text-red-500" /> },
-      { name: 'Jenkins', icon: <span className="text-red-500 font-bold">J</span> },
-      { name: 'Kafka', icon: <span className="text-black font-bold">K</span> }
+    'Technologies/Tools': [
+      { name: 'AWS' },
+      { name: 'Docker' },
+      { name: 'Jenkins' },
+      { name: 'Git' },
+      { name: 'Kafka' },
+      { name: 'Kubeflow' },
+      { name: 'Pandas' },
+      { name: 'Scikit-learn' },
+      { name: 'Dask' },
+      { name: 'PyTorch' },
+      { name: 'TensorFlow' },
+      { name: 'NumPy' },
+      { name: 'LangChain' },
+      { name: 'ChromaDB' },
+      { name: 'Streamlit' },
+      { name: 'n8n' },
+      { name: 'Ollama' },
+      { name: 'FastAPI' },
+      { name: 'smolagents' }
     ],
     'Certifications': [
-      { name: 'AWS Certified Solutions Architect - Associate', icon: <Aws className="text-orange-400" /> }
+      { name: 'AWS Certified Solutions Architect - Associate' }
     ]
+  };
+
+  const categoryIcons = {
+    'Languages': <Code className="h-5 w-5" />,
+    'Technologies/Tools': <Database className="h-5 w-5" />,
+    'Certifications': <Award className="h-5 w-5" />
   };
 
   return (
@@ -64,35 +56,35 @@ const Skills = () => {
           </p>
         </div>
         
-        {/* Category Tabs */}
-        <div className="flex flex-wrap justify-center gap-2 mb-10">
-          {categories.map((category) => (
-            <button
-              key={category}
-              onClick={() => setActiveCategory(category)}
-              className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
-                activeCategory === category 
-                  ? 'bg-blue-600 text-white' 
-                  : 'bg-slate-200 text-slate-700 hover:bg-slate-300'
-              }`}
-            >
-              {category}
-            </button>
-          ))}
-        </div>
-        
-        {/* Skills Display */}
-        <div className="max-w-5xl mx-auto">
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
-            {skillsByCategory[activeCategory]?.map((skill, index) => (
-              <div key={index} className="flex flex-col items-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
-                <div className="w-10 h-10 flex items-center justify-center mb-2">
-                  {skill.icon}
+        <div className="max-w-4xl mx-auto">
+          <Tabs defaultValue="Languages" className="w-full">
+            <TabsList className="grid grid-cols-3 w-full mb-8">
+              <TabsTrigger value="Languages" className="flex items-center gap-2">
+                {categoryIcons['Languages']} Languages
+              </TabsTrigger>
+              <TabsTrigger value="Technologies/Tools" className="flex items-center gap-2">
+                {categoryIcons['Technologies/Tools']} Technologies/Tools
+              </TabsTrigger>
+              <TabsTrigger value="Certifications" className="flex items-center gap-2">
+                {categoryIcons['Certifications']} Certifications
+              </TabsTrigger>
+            </TabsList>
+            
+            {Object.keys(skillCategories).map((category) => (
+              <TabsContent key={category} value={category}>
+                <div className="flex flex-wrap gap-3 justify-center">
+                  {skillCategories[category].map((skill, index) => (
+                    <span 
+                      key={index} 
+                      className="px-4 py-2 bg-blue-100 text-blue-700 rounded-full text-sm font-medium"
+                    >
+                      {skill.name}
+                    </span>
+                  ))}
                 </div>
-                <span className="text-sm text-center font-medium text-slate-700">{skill.name}</span>
-              </div>
+              </TabsContent>
             ))}
-          </div>
+          </Tabs>
         </div>
       </div>
     </section>
