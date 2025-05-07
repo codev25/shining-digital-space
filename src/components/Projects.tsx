@@ -32,6 +32,33 @@ const Projects = () => {
       liveUrl: '#',
       imageClass: 'bg-purple-100',
     },
+    {
+      id: 4,
+      title: 'Retrieval-Augmented-Generation',
+      description: 'Developed a question-answering system designed to smartly query a corpus of documents in Python, implementing a RAG pipeline. Utilized LangChain to combine retrieved context with the user query, feeding the augmented prompt to a Google Gemini model to produce grounded, context-aware answers.',
+      technologies: ['Python', 'LangChain', 'Gemini'],
+      githubUrl: '#',
+      liveUrl: '#',
+      imageClass: 'bg-yellow-100',
+    },
+    {
+      id: 5,
+      title: 'Classification Model',
+      description: 'Built a handwritten digit classification system using PyTorch, featuring a custom Convolutional Neural Network (CNN) architecture. Utilized torchvision and DataLoader for efficient loading, transformation, and batching of the MNIST dataset. Used the Adam optimizer with CrossEntropyLoss for the training process, followed by model evaluation to measure classification accuracy on the test set.',
+      technologies: ['Python', 'PyTorch', 'CNN', 'torchvision', 'DataLoader'],
+      githubUrl: '#',
+      liveUrl: '#',
+      imageClass: 'bg-red-100',
+    },
+    {
+      id: 6,
+      title: 'Potato Disease Classifier',
+      description: 'Built a full-stack potato disease classifier using Python (TensorFlow/Keras, FastAPI) and React, featuring a web interface for drag-and-drop image upload and classification display. Trained a custom Convolutional Neural Network (CNN) with TensorFlow/Keras on a PlantVillage dataset subset, utilizing data augmentation (rotations, flips) and evaluating accuracy on the test set. Developed a RESTful API using FastAPI to serve the trained model, handling image preprocessing and returning predictions (disease class, confidence) as JSON to the frontend.',
+      technologies: ['Python', 'TensorFlow', 'FastAPI', 'React'],
+      githubUrl: '#',
+      liveUrl: '#',
+      imageClass: 'bg-orange-100',
+    },
   ];
 
   return (
@@ -47,11 +74,7 @@ const Projects = () => {
         
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
           {projects.map(project => (
-            <Card key={project.id} className="overflow-hidden transition-all hover:shadow-lg">
-              <div className={`h-52 ${project.imageClass} flex items-center justify-center`}>
-                <span className="text-slate-500">Project Image</span>
-              </div>
-              
+            <Card key={project.id} className="overflow-hidden transition-all hover:shadow-lg">              
               <CardHeader className="py-4">
                 <h3 className="text-xl font-bold text-slate-800">{project.title}</h3>
               </CardHeader>

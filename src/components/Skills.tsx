@@ -5,34 +5,21 @@ import { Card, CardContent } from '@/components/ui/card';
 const Skills = () => {
   const skillCategories = [
     {
-      category: 'Frontend',
+      category: 'Languages',
+      skills: ['Python', 'Java', 'Scala', 'SQL', 'HTML/CSS'],
+    },
+    {
+      category: 'Technologies/Tools',
       skills: [
-        { name: 'HTML5', proficiency: 90 },
-        { name: 'CSS3', proficiency: 85 },
-        { name: 'JavaScript', proficiency: 90 },
-        { name: 'React', proficiency: 85 },
-        { name: 'Next.js', proficiency: 80 },
+        'AWS', 'Docker', 'Jenkins', 'Git', 'Kafka', 'Kubeflow', 
+        'Pandas', 'Scikit-learn', 'Dask', 'PyTorch', 'TensorFlow', 
+        'NumPy', 'LangChain', 'ChromaDB', 'Streamlit', 'n8n', 
+        'Ollama', 'FastAPI', 'smolagents'
       ],
     },
     {
-      category: 'Backend',
-      skills: [
-        { name: 'Node.js', proficiency: 80 },
-        { name: 'Express', proficiency: 75 },
-        { name: 'MongoDB', proficiency: 70 },
-        { name: 'PostgreSQL', proficiency: 65 },
-        { name: 'GraphQL', proficiency: 60 },
-      ],
-    },
-    {
-      category: 'Tools',
-      skills: [
-        { name: 'Git', proficiency: 85 },
-        { name: 'Docker', proficiency: 70 },
-        { name: 'AWS', proficiency: 65 },
-        { name: 'Figma', proficiency: 75 },
-        { name: 'VS Code', proficiency: 90 },
-      ],
+      category: 'Certifications',
+      skills: ['AWS Certified Solutions Architect - Associate'],
     },
   ];
 
@@ -54,21 +41,14 @@ const Skills = () => {
                 <h3 className="text-xl font-bold text-slate-800 mb-6">
                   {category.category}
                 </h3>
-                <div className="space-y-6">
-                  {category.skills.map((skill, skillIndex) => (
-                    <div key={skillIndex}>
-                      <div className="flex justify-between mb-1">
-                        <span className="font-medium text-slate-700">{skill.name}</span>
-                        <span className="text-slate-500">{skill.proficiency}%</span>
-                      </div>
-                      <div className="w-full bg-slate-200 h-2.5 rounded-full">
-                        <div 
-                          className="bg-blue-600 h-2.5 rounded-full"
-                          style={{ width: `${skill.proficiency}%` }}
-                        ></div>
-                      </div>
-                    </div>
-                  ))}
+                <div className="space-y-2">
+                  <ul className="list-disc pl-5">
+                    {category.skills.map((skill, skillIndex) => (
+                      <li key={skillIndex} className="text-slate-700">
+                        {skill}
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               </CardContent>
             </Card>
