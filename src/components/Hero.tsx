@@ -15,13 +15,17 @@ const Hero = () => {
             I'm a <span className="font-semibold text-blue-600">Software Engineer with expertise in GenAI/ML/Data Eng/Backend</span>, passionate about building AI/ML applications.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Button className="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg">
-              View My Work
-            </Button>
-            <Button variant="outline" className="px-6 py-3 border border-blue-600 text-blue-600 hover:bg-blue-50 font-medium rounded-lg flex items-center gap-2">
-              Contact Me
-              <ArrowRight size={18} />
-            </Button>
+            <a href="#projects">
+              <Button className="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg">
+                View My Work
+              </Button>
+            </a>
+            <a href="#contact">
+              <Button variant="outline" className="px-6 py-3 border border-blue-600 text-blue-600 hover:bg-blue-50 font-medium rounded-lg flex items-center gap-2">
+                Contact Me
+                <ArrowRight size={18} />
+              </Button>
+            </a>
           </div>
         </div>
       </div>
